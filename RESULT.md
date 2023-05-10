@@ -1,4 +1,4 @@
-# ComputerGraphics
+# Computer Graphics
 Computer graphics programming tasks.
 
 Task M1:
