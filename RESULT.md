@@ -11,3 +11,7 @@ Task Vivencial 1:
 Task M2:
 
 ![](https://github.com/leonhar001/ComputerGraphics/blob/main/MOD2/Hello3D%20-%20Pyramid/2cube.gif?raw=true)
+
+Task Vivencial 2:
+
+![](https://github.com/leonhar001/ComputerGraphics/blob/main/GB2/suzanneText.gif?raw=true)
