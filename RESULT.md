@@ -14,4 +14,4 @@ Task M2:
 
 Task Vivencial 2:
 
-![](https://github.com/leonhar001/ComputerGraphics/blob/main/GB2/suzanneText.gif?raw=true)
+![](https://github.com/leonhar001/ComputerGraphics/blob/main/GB2/Hello3D%20-%20Pyramid/suzanneText.gif?raw=true)
