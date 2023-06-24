@@ -19,4 +19,4 @@ Task Vivencial 2:
 
 Task M4:
 
-<img src="https://github.com/leonhar001/ComputerGraphics/blob/main/MOD4/suzannePhong.gif?raw=true" width="700" height="700">
+<img src="https://github.com/leonhar001/ComputerGraphics/blob/main/MOD4%20and%20MOD5/suzannePhong.gif?raw=true" width="700" height="700">
