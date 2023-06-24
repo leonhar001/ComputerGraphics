@@ -1,6 +1,3 @@
-# ComputerGraphics
-Computer graphics programming tasks.
-
 # Computer Graphics
 Computer graphics programming tasks.
 
