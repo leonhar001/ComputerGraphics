@@ -24,3 +24,8 @@ Task M4:
 Task M5:
 
 <img src="https://github.com/leonhar001/ComputerGraphics/blob/main/MOD4%20and%20MOD5/suzanneCamera.gif?raw=true" width="700" height="700">
+
+Task M6:
+
+<img src="https://github.com/leonhar001/ComputerGraphics/blob/main/MOD6/suzanneCurves.gif?raw=true" width="700" height="700">
+
