@@ -68,9 +68,8 @@ vector <GLuint> indices;
 vector <glm::vec3> normals;
 vector <glm::vec2> texCoords;
 
-
 //FUNÇÕES TRAGETÓRIA
-vector <glm::vec3> generateControlPointsSet(int nPoints); // GERAR PONTOS ELATÓRIOS
+std::vector<glm::vec3> readControlPointsFromFile(const std::string& filename);
 
 int main() {
 
@@ -101,7 +100,7 @@ int main() {
 	int nVertices;
 	
 	//POINTS AND CURVES
-	std::vector<glm::vec3> controlPoints = generateControlPointsSet(15);
+	std::vector<glm::vec3> controlPoints = readControlPointsFromFile("controlPoints.txt");
 
 	int pointsPerSegment = 500;
 	Bezier bezier;
@@ -302,28 +301,36 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	}
 }
 
-std::vector<glm::vec3> generateControlPointsSet(int nPoints) {
+std::vector<glm::vec3> readControlPointsFromFile(const std::string& filename)
+{
 	std::vector<glm::vec3> controlPoints;
 
-	// Gerar números aleatórios
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_real_distribution<float> distribution(-15.0f, 15.0f);  // Intervalo aberto (-x, x)
-
-	for (int i = 0; i < nPoints; i++) {
-		glm::vec3 point;
-		do {
-			// Gerar coordenadas x e y aleatórias
-			point.x = distribution(gen);
-			point.y = distribution(gen);
-		} while (std::find(controlPoints.begin(), controlPoints.end(), point) != controlPoints.end());
-
-		// Definir coordenada z como 0.0
-		point.z = 0.0f;
-
-		controlPoints.push_back(point);
+	std::ifstream file(filename);
+	if (!file)
+	{
+		std::cerr << "Falha ao abrir o arquivo " << filename << std::endl;
+		return controlPoints;
 	}
-	
+
+	std::string line;
+	while (std::getline(file, line))
+	{
+		if (line.find("Point: (") != std::string::npos)
+		{
+			// Extrair os valores das coordenadas
+			size_t startPos = line.find("(") + 1;
+			size_t endPos = line.find(")");
+			std::string pointStr = line.substr(startPos, endPos - startPos);
+
+			std::stringstream ss(pointStr);
+			glm::vec3 point;
+			char comma;
+			ss >> point.x >> comma >> point.y >> comma >> point.z;
+			controlPoints.push_back(point);
+		}
+	}
+
+	file.close();
 	return controlPoints;
 }
 
