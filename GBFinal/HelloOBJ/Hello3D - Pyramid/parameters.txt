@@ -1,0 +1,21 @@
+width 750
+height 750
+
+controlPointsPath controlPoints.txt
+pointsPerSegment 500
+
+bolaOBJ bola.obj
+cubeOBJ cube.obj
+suzanneOBJ suzanneTri.obj
+boxTexture boxTex.png
+
+ka 1.000000
+kd 0.500000
+ks 0.500000
+ns 0.500000
+
+lightPosition 10.0 0.0 30.0
+lightColor 1.0 1.0 1.0
+
+backGroundColor 0.2 0.2 0.2
+cameraPosition 0.0 0.0 20.0
