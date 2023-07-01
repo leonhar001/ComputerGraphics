@@ -1,6 +1,10 @@
 # Computer Graphics
 Computer graphics programming tasks.
 
+Final task: 
+
+<img src="https://github.com/leonhar001/ComputerGraphics/blob/main/GBFinal/tarefaGB.gif?raw=true" width="700" height="700">
+
 Task M1:
 
 <img src="https://github.com/leonhar001/ComputerGraphics/blob/main/MOD1/m1%20task.png?raw=true" width="700" height="700">
